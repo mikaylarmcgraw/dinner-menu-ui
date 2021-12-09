@@ -1,25 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {makeStyles} from '@material-ui/core';
-import { Button } from 'reactstrap';
-
-const useStyles = makeStyles((theme) => ({
-  root:{
-    padding: 10
-  },
-  weekLabels: {
-      fontSize: 18,
-      padding: 20,
-      display: "flex",
-      flexDirection: "row",
-  },
-  optionLabel:{
-    paddingLeft: 20
-  },
-  button:{
-    marginLeft: 10,
-    color: "black",
-  }
-}));
+import './weeklyMenuForm.css'
 
 export default function WeeklyMenu(): JSX.Element {
 
@@ -31,33 +11,54 @@ export default function WeeklyMenu(): JSX.Element {
   
   document.title = title;
 
-  const classes = useStyles();
   return(
-    <form>
-      <h2 className={classes.root}>Weekly Dinner Menu</h2>
-      <div className={classes.weekLabels}>Monday:
-      <label className={classes.optionLabel}>Dinner 1</label>
+    <div className="Form_Container">
+    <form className="Form">
+      <h2 className="Header">Weekly Dinner Menu</h2>
+      <div className="Day_Section">
+      <label className="Week_label"> Monday</label>
+        <input className="Option_label">
+        </input>
+
       </div>
-      
-      <div className={classes.weekLabels}>Tuesday:
-      <label className={classes.optionLabel}>Dinner 2</label>
+      <div className="Day_Section">
+      <label className="Week_label"> Tuesday</label>
+        <input className="Option_label">
+        </input>
       </div>
-      <div className={classes.weekLabels}>Wednesday:
-      <label className={classes.optionLabel}>Dinner 3</label>
+      <div className="Day_Section">
+      <label className="Week_label"> Wednesday</label>
+        <input className="Option_label">
+        </input>
+
       </div>
-      <div className={classes.weekLabels}>Thursday:
-      <label className={classes.optionLabel}>Dinner 4</label>
+      <div className="Day_Section">
+      <label className="Week_label"> Thursday </label>
+        <input className="Option_label">
+        </input>
       </div>
-      <div className={classes.weekLabels}>Friday:
-      <label className={classes.optionLabel}>Dinner 5</label>
+      <div className="Day_Section">
+      <label className="Week_label"> Friday </label>
+        <input className="Option_label">
+        </input>
+
       </div>
-      <div className={classes.weekLabels}>Saturday:
-      <label className={classes.optionLabel}>Dinner 6</label>
+      <div className="Day_Section">
+      <label className="Week_label"> Saturday</label>
+        <input className="Option_label">
+        </input>
+
       </div>
-      <div className={classes.weekLabels}>Sunday:
-      <label className={classes.optionLabel}>Dinner 7</label>
+      <div className="Day_Section">
+      <label className="Week_label"> Sunday</label>
+        <input className="Option_label"> 
+        </input>
+
       </div>
-      <Button className={classes.button} >Generate</Button>
+      <div className="">
+      <button className="Button">Generate</button>
+      </div>
     </form>
+    </div>
   );
 }
